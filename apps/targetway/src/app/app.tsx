@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Message } from '@targetway/api-interfaces';
-import { GlobalTarget } from '../features/global-target';
+import { Income } from '../features/income';
 
 export const App = () => {
   const [m, setMessage] = useState<Message>({ message: '' });
@@ -12,7 +12,7 @@ export const App = () => {
   }, []);
 
   return (
-    <GlobalTarget/>
+    <Income/>
   );
 };
 
