@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Message } from '@targetway/api-interfaces';
+import { GlobalTarget } from '../features/global-target';
 
 export const App = () => {
   const [m, setMessage] = useState<Message>({ message: '' });
@@ -11,16 +12,7 @@ export const App = () => {
   }, []);
 
   return (
-    <>
-      <div style={{ textAlign: 'center' }}>
-        <h1>Welcome to targetway!</h1>
-        <img
-          width="450"
-          src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
-        />
-      </div>
-      <div>{m.message}</div>
-    </>
+    <GlobalTarget/>
   );
 };
 
